@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(19, 99, 133);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+.intro {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quote {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}

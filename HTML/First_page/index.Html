@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color:grey">
-    <h1 style="font-size:60px; font-family:'Times New Roman', Times, serif; text-align:center;"><b>Hello World</b></h1>
+<body>
+    <h1>Hello World</h1>
     <hr>
-    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+    <p class="intro">
         This is <ins>my <b><abbr title="Hyper Text Markup Language">HTML</abbr></b> page</ins> for the <i>internship.</i>
         <br>I am <mark>currently learning HTML</mark> from the <del>beginning.</del></p>
     <hr>
     <p><sub>2</sub>3<sup>4</sup> is use of super and sub script</p>
     <hr>
-    <a href="https://www.google.com">google</a>
+    <a href="https://www.google.com"
+        title="This link will open the google base page">
+        google</a>
     <hr>
     <img src="Knight.jpeg" 
     alt="Photo of a Black Knight"
@@ -26,7 +29,8 @@
         <li>Death Robe</li>
     </ul>
     <hr>
-    <p style="font-family: 'Times New Roman', Times, serif;"><q>
+    <!-- Quote by the Black Knight --> 
+    <p class="quote"><q>
         <i>A knight is sworn to valor,<br>
         His heart knows only virtue,<br>
         His blade defends the helpless,<br>
