@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcultor</title>
+    <link 
+        rel="stylesheet" 
+        href = "./style.css"
+    />
+</head>
+
+<script>
+    function calculate() {
+        var form = document.getElementById('myform');
+        var a = form.txt1.value;
+        var b = form.txt2.value;
+        var op = form.operator.value;
+
+        var x = parseFloat(a);
+        var y = parseFloat(b);
+
+        var result;
+        switch (op) {
+            case 'sum':
+                result = x + y;
+                form.ans.value = 'Sum is ' + result;
+                break;
+            case 'sub':
+                result = x - y;
+                form.ans.value = 'Sub is ' + result;
+                break;
+            case 'mul':
+                result = x * y;
+                form.ans.value = 'Mul is ' + result;
+                break;
+            case 'div':
+                result = x / y;
+                form.ans.value = 'Div is ' + result;
+                break;
+            default:
+                form.ans.value = 'Select an operation';
+        }
+    }
+</script>
+<body>
+    <form id="myform">
+        No1 : <input type="text" name="txt1" /> <br/>
+        No2 : <input type="text" name="txt2" /> <br/>
+        <div class="Sum">
+            <label>
+                <input type="radio" id="sum" name="operator" value="sum" checked>
+                Sum
+            </label>
+        </div>
+        <div class="Sub">
+            <label>
+                <input type="radio" id="sub" name="operator" value="sub">
+                Sub
+            </label>
+        </div>
+        <div class="Mul">
+            <label>
+                <input type="radio" id="mul" name="operator" value="mul">
+                Mul
+            </label>
+        </div>
+        <div class="Div">
+            <label>
+                <input type="radio" id="div" name="operator" value="div">
+                Div
+            </label>
+        </div>
+        <input type="button" value="Calculate" onclick="calculate()" /> <br/>
+        <input type="text" name="ans" readonly disabled/> <br/>
+    </form>
+</body>
+</html>

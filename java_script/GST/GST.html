@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+    <style>
+        html{
+            text-align: center;
+        }
+    </style>
+</head>
+<script>
+    function GST(){
+        var cash = parseFloat(document.getElementById("cash").value);
+        var per = parseInt(document.getElementById("per").value);
+        var extra = cash * per / 100;
+        var result = cash + extra;
+
+        var amount = document.getElementById("amount")
+        var sen = document.getElementById("sen")
+        var total = document.getElementById("total")
+        amount.innerText = "Amount: ₹" + cash;  
+        sen.innerText = "GST(" + per + "%): ₹ " + extra;
+        total.innerText = "Total: ₹ " + result;
+    }
+</script>
+<body>
+    <div>
+        <h1>GST Calculator</h1>
+    </div>
+
+    <div>
+        Enter Amount (in INR): <input type="text" id="cash" >
+    </div>
+
+    <div>
+        Select GST Rate: <select id="per">
+            <option>5%</option>
+            <option>18%</option>
+            <option>24%</option>
+            <option>33%</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="button" value="Calculate GST"  onclick="GST()" />
+    </div>
+
+    <div>
+        <p id="amount"></p>
+    </div>
+
+    <div>
+        <p id="sen"></p>
+    </div>
+
+    <div>
+        <p id="total"></p>
+    </div>
+</body>
+</html>
